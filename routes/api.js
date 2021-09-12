@@ -11,7 +11,7 @@ router.get("/api/workouts", (req, res) => {
 });
 
 router.get("/api/workouts/range", (req, res) => {
-    Workout.find({}).limit(10).then((workoutData) => {
+    Workout.find({}).limit(7).then((workoutData) => {
         res.json(workoutData);
     }).catch((err) => {
         res.status(400).json(err);
